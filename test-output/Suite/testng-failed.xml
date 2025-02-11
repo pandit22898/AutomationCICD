@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="pramodseleniumframework.testComponent.Listeners"/>
+  </listeners>
+  <test thread-count="5" parallel="tests" name="Error Validation Test(failed)">
+    <classes>
+      <class name="pramodseleniumframework.test.ErrorValidation">
+        <methods>
+          <include name="LaunchApplication"/>
+          <include name="closeBrowser"/>
+          <include name="ProductErrorValidation"/>
+        </methods>
+      </class> <!-- pramodseleniumframework.test.ErrorValidation -->
+    </classes>
+  </test> <!-- Error Validation Test(failed) -->
+  <test thread-count="5" parallel="tests" name="PurchaseOrder Test(failed)">
+    <classes>
+      <class name="pramodseleniumframework.test.PurchaseOrder">
+        <methods>
+          <include name="LaunchApplication"/>
+          <include name="closeBrowser"/>
+          <include name="verifyOrderProduct"/>
+          <include name="submitOrder" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- pramodseleniumframework.test.PurchaseOrder -->
+    </classes>
+  </test> <!-- PurchaseOrder Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
