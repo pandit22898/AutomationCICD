@@ -3,13 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="cucumber.TestNGTestRunner">
+      <class name="pramodseleniumframework.test.PurchaseOrder">
         <methods>
-          <include name="setUpClass"/>
-          <include name="runScenario" invocation-numbers="0"/>
-          <include name="tearDownClass"/>
+          <include name="LaunchApplication"/>
+          <include name="closeBrowser"/>
+          <include name="verifyOrderProduct"/>
+          <include name="submitOrder" invocation-numbers="1"/>
         </methods>
-      </class> <!-- cucumber.TestNGTestRunner -->
+      </class> <!-- pramodseleniumframework.test.PurchaseOrder -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

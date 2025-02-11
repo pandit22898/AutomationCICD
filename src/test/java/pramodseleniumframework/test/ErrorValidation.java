@@ -42,7 +42,7 @@ public class ErrorValidation extends BaseTest {
 	public void ProductErrorValidation() throws IOException, InterruptedException{
 		
 
-		String coat = "Banarsi Saree";
+		String coat = "ZARA COAT 3";
 		
 		ProductCatalogue productCatalogue = landingPage.LoginIn("ppendeavour@gmail.com", "Pramod@123");
 		
@@ -52,7 +52,7 @@ public class ErrorValidation extends BaseTest {
 		Thread.sleep(1000);
 		CartPage cartPage = productCatalogue.clickOnCart();
 		
-		boolean match = cartPage.getCartProducts("ZARA COAT");
+		boolean match = cartPage.getCartProducts("Banarsi Saree");
 		Assert.assertFalse(match);
 		
 		
