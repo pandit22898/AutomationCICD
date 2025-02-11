@@ -78,7 +78,7 @@ public class BaseTest {
 		
 	}
 		
-		//Convert JSON to Hashmap
+		//Convert Json to Hashmap
 		public List<HashMap<String, String>> getJsonDataToMap(String filePath) throws IOException {
 			
 			String jsonContent =
